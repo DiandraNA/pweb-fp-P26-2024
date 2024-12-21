@@ -1,0 +1,38 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "notiflix": "^3.2.7",
+    "nuxt": "^3.14.1592",
+    "pinia": "^2.3.0",
+    "vue": "latest",
+    "vue-datepicker-next": "^1.0.3",
+    "vue-router": "latest"
+  },
+  "version": "1.0.0",
+  "description": "| Nama                  | NRP        | | --------------------- | ---------- | | Diandra Naufal A | 5027231004 | | Muhammad Faqih H | 5027231023 | | Johanes Edward N | 5027231067 |",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "nodemon": "^3.1.9",
+    "tailwindcss": "^3.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
