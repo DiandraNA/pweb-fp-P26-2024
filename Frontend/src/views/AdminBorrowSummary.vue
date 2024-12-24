@@ -24,20 +24,40 @@ export default {
     const fetchError = ref(false);
     const isLoading = ref(true);
 
+    // Dummy Data for Testing
+    borrowsData.value = [
+      {
+        _id: "1",
+        item_name: "Laptop",
+        amount: 2,
+        borrow_date: new Date("2024-01-01T10:00:00"),
+        return_date: new Date("2024-01-10T10:00:00"),
+        borrower_name: "John Doe",
+        officer_name: "Jane Smith",
+      },
+      {
+        _id: "2",
+        item_name: "Projector",
+        amount: 1,
+        borrow_date: new Date("2024-01-05T14:00:00"),
+        return_date: new Date("2024-01-15T14:00:00"),
+        borrower_name: "Alice Brown",
+        officer_name: "Tom Hardy",
+      },
+      {
+        _id: "3",
+        item_name: "Camera",
+        amount: 3,
+        borrow_date: new Date("2024-01-03T08:00:00"),
+        return_date: new Date("2024-01-12T08:00:00"),
+        borrower_name: "Bob Johnson",
+        officer_name: "Sara Lee",
+      },
+    ];
+
     const fetchBorrows = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/borrow/all-equipment");
-        if (!response.ok) {
-          throw new Error("Failed to fetch borrow data");
-        }
-        const data = await response.json();
-        borrowsData.value = [...data];
-      } catch (error) {
-        console.error(error);
-        fetchError.value = true;
-      } finally {
-        isLoading.value = false;
-      }
+      // No API call for testing; using dummy data
+      isLoading.value = false;
     };
 
     const exportToPDF = () => {

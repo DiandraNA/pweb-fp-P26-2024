@@ -120,7 +120,9 @@ export default {
   methods: {
     async submitBorrow() {
       try {
-        await axios.post('http://localhost:3000/borrow/book-equipment', this.borrowForm);
+        const payload = JSON.parse(JSON.stringify(this.borrowForm));
+        console.log('Data yang dikirim:', payload); 
+        await axios.post('http://localhost:3000/borrow/book-equipment', payload);
         alert('Peminjaman berhasil!');
         this.fetchBorrowedItems();
       } catch (error) {
